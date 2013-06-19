@@ -7,7 +7,7 @@ title: Home
 
 With serverspec, you can write RSpec tests for checking your servers are configured correctly.
 
-Serverspec tests your servers' **actual state**  through **SSH access**, so you don't need to install any agent softwares on your servers and can use any configuration management tools, [Puppet](https://puppetlabs.com/), [Chef](http://www.opscode.com/chef/), [CFEngine](http://cfengine.com/) and so on.
+Serverspec tests your servers' **actual state**  through **SSH access**, so you don't need to install any agent software on your servers and can use any configuration management tools, [Puppet](https://puppetlabs.com/), [Chef](http://www.opscode.com/chef/), [CFEngine](http://cfengine.com/) and so on.
 
 ----
 
@@ -49,7 +49,7 @@ Input target host name: www.example.jp
 ```
 
 
-spec/www.example.jp/httpd_spec.rb is a sample spec file and its content is like this.
+``spec/www.example.jp/httpd_spec.rb`` is a sample spec file. It has the following contents.
 
 ```ruby
 require 'spec_helper'
@@ -73,9 +73,9 @@ describe file('/etc/httpd/conf/httpd.conf') do
 end
 ```
 
-You can write spec for testing servers like this.
+You can write tests for servers as noted above.
 
-Serverspec with SSH backend logs in to target servers as a user configured in ``~/.ssh/config`` or a current user.If you'd like to change the user, please edit the below line in ``spec/spec_helper.rb``.
+Serverspec with SSH backend logs in to target servers as a user configured in ``~/.ssh/config`` or a current user. If you'd like to change the user, please edit the following line in ``spec/spec_helper.rb``.
 
 ```ruby
       user    = options[:user] || Etc.getlogin

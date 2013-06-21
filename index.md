@@ -73,7 +73,7 @@ describe file('/etc/httpd/conf/httpd.conf') do
 end
 ```
 
-You can write tests for servers as noted above.
+You can write a spec for testing servers as noted above.
 
 Serverspec with SSH backend logs in to target servers as a user configured in ``~/.ssh/config`` or a current user. If you'd like to change the user, please edit the following line in ``spec/spec_helper.rb``.
 
